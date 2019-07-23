@@ -1,0 +1,11 @@
+applications:
+- name: tracker-eureka-server
+  path: ./build/libs/eureka-server.jar
+  routes:
+  - route: eureka-server-pal-happy-homer.cfapps.io
+  memory: 1G
+  instances: 1
+  env:
+    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
+    SERVER_PORT: 8080
+

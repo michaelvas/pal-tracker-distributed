@@ -1,6 +1,6 @@
 package test.pivotal.pal.tracker.allocations;
 
-import io.pivotal.pal.tracker.allocations.App;
+import io.pivotal.pal.tracker.allocations.AllocationsApp;
 import org.junit.Test;
 import org.springframework.web.client.RestTemplate;
 
@@ -10,7 +10,7 @@ public class AllocationsAppTest {
 
     @Test
     public void embedded() {
-        App.main(new String[]{});
+        AllocationsApp.main(new String[]{});
 
         String response = new RestTemplate().getForObject("http://localhost:8181/allocations?projectId=0", String.class);
 

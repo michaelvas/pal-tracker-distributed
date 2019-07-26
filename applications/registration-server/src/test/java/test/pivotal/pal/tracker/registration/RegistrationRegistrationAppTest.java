@@ -1,16 +1,16 @@
 package test.pivotal.pal.tracker.registration;
 
-import io.pivotal.pal.tracker.registration.App;
+import io.pivotal.pal.tracker.registration.RegistrationApp;
 import org.junit.Test;
 import org.springframework.web.client.RestTemplate;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class RegistrationAppTest {
+public class RegistrationRegistrationAppTest {
 
     @Test
     public void embedded() {
-        App.main(new String[]{});
+        RegistrationApp.main(new String[]{});
 
         RestTemplate restTemplate = new RestTemplate();
 
